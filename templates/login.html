@@ -1,0 +1,13 @@
+
+
+{%  from 'macros.html' import my_field %}
+
+{% block content %}
+<form method ='POST' action='/login' class='form' >
+    {{ form.hidden_tag() }}
+    {% for field in form %}
+      {{ my_field(field) }} 
+    {% endfor %}   
+    <input type ='submit' value='login'>
+</form> 
+{% endblock  %}
